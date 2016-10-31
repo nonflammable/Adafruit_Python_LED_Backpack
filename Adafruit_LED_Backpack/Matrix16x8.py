@@ -40,7 +40,7 @@ class Matrix16x8(HT16K33.HT16K33):
         if x < 0 or x > 15 or y < 0 or y > 7:
             # Ignore out of bounds pixels.
             return
-        self.set_led(y * 16 + ((x + 16) % 16), value)
+        self.set_led(y * 16 + x, value)
 
     def set_image(self, image):
         """Set display buffer to Python Image Library image.  Image will be converted
